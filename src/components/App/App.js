@@ -16,6 +16,21 @@ function App() {
     // -> when adding a second card, an error does pop up. i know i am missing a key
   
 
+  const addTrick = (newTrick)=> {
+
+    fetch('http://localhost:3001/api/v1/tricks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newTrick),
+    })
+    .then(res => res.json())
+    .then(data => setTricks([...tricks, data]))
+    .catch(err => console.log(err))
+    // setTricks([...tricks, newTrick])
+  }
+
   const getTricks = ()=> {
     return fetch('http://localhost:3001/api/v1/tricks')
     .then(response => {
@@ -34,10 +49,6 @@ function App() {
     getTricks()
   },[])
   console.log(tricks)
-
-  const addTrick = (newTrick)=> {
-    setTricks([...tricks, newTrick])
-  }
 
   return (
     <div className="App">

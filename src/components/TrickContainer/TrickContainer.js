@@ -6,12 +6,12 @@ const TrickContainer = ({tricks})=> {
 
     const trickCards = tricks.map(trick => {
         return <Trick 
-        id={trick.id}
         key={trick.id} 
         stance={trick.stance} 
         name={trick.name} 
         obstacle={trick.obstacle} 
-        tutorial={trick.tutorial} />
+        tutorial={trick.tutorial}
+        id={trick.id} />
     })
 
     return (
