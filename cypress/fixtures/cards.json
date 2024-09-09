@@ -1,0 +1,23 @@
+[
+    {
+        "stance": "running",
+        "name": "treflip",
+        "obstacle": "flat ground",
+        "tutorial": "letsgoooooo",
+        "id": 26
+      },
+      {
+        "stance": "jumping",
+        "name": "flatground",
+        "obstacle": "flat ground",
+        "tutorial": "thissite",
+        "id": 27
+      },
+      {
+        "stance": "swiming",
+        "name": "treflip",
+        "obstacle": "flat ground",
+        "tutorial": "thatsite",
+        "id": 28
+      }
+]
