@@ -4,7 +4,7 @@ describe('empty spec', () => {
       statusCode: 200,
       fixture: 'cards'
     }).as('oneCard')
-    cy.visit('http://localhost:3000/?stance=Regular')
+    cy.visit('http://localhost:3000')
   })
   it('should display the main page when it loads', () => {
     cy.get('h1').should('contain', 'Sick Trick Wish List')
